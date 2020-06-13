@@ -11,7 +11,8 @@ class Application(tk.Frame):
     def __init__(self, master = None):
         super().__init__(master)
         self.master = master
-        self.drawmesh()
+        self.master.geometry(f'{self.Width}x{self.Height}')
 
-    def drawmesh(self):
-        pass
+root = tk.Tk()
+app = Application(root)
+app.mainloop()
