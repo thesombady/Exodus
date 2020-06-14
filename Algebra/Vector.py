@@ -9,7 +9,6 @@ class vec2d(object):
         self.y = y
         self.vector = (x,y)
     
-
     def __str__(self):
         return f'[({self.x},{self.y})]'
     
@@ -42,9 +41,6 @@ class vec2d(object):
     def cross(self, other):
         return vec2d(self.x * other.y, other.x * self.y)
     
-
-
-
 class vec3d(object):
     """ Creates a vec3d object which represents a two dimensional vector in the standard R^3 plane. """
 
@@ -85,7 +81,7 @@ class vec3d(object):
 
 
 class Matrix2d:
-
+    """Creates a matrix of two vectors of which one can preforme some vector transformations. """
     def __init__(self, vec1, vec2):
         if not isinstance(vec1, (vec2d)):
             raise TypeError("Wrong input in matrix2d, not the vector input")
@@ -127,3 +123,12 @@ class Matrix2d:
         element1 = self.vec1[0] * vector[0] + self.vec2[0] * vector[1]
         element2 = self.vec1[1] * vector[0] + self.vec2[1] * vector[1]
         return vec2d(element1, element2)
+
+
+class triangle3d:
+    
+    def __init__(self, vec1, vec2, vec3):
+        self.vec1 = vec1
+        self.vec2 = vec2
+        self.vec3 = vec3
+
