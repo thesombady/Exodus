@@ -43,7 +43,6 @@ class vec2d(object):
     
 class vec3d(object):
     """ Creates a vec3d object which represents a two dimensional vector in the standard R^3 plane. """
-
     def __init__(self, x, y, z):
         self.x = x
         self.y = y
@@ -123,12 +122,3 @@ class Matrix2d:
         element1 = self.vec1[0] * vector[0] + self.vec2[0] * vector[1]
         element2 = self.vec1[1] * vector[0] + self.vec2[1] * vector[1]
         return vec2d(element1, element2)
-
-
-class triangle3d:
-    
-    def __init__(self, vec1, vec2, vec3):
-        self.vec1 = vec1
-        self.vec2 = vec2
-        self.vec3 = vec3
-
