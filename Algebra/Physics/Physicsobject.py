@@ -73,14 +73,7 @@ class Object(PhysicalObject):
                 possibilites.append(True)
             else:
                 possibilites.append(False)
-
         if not False in possibilites:
             print('[System:] Could move')
         else:
             print('[System:] Could not move')
-
-
-
-object1 = Object(x1 = 8, x2 = 11,y1=1, y2 = 1, name = 'object1')
-player = Object(name = 'player')
-player.addvec((1,0))
