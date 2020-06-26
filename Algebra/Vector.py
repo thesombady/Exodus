@@ -1,5 +1,3 @@
-
-
 class vec3d:
 
     def __init__(self, x, y, z):
@@ -60,26 +58,3 @@ class vec3d:
 
     def normalize(self):
         return 1 / self.norm() * self
-
-class matrix3d:
-
-    def __init__(self, type = None):
-        self.type = type
-        self.initliaize()
-
-    def initliaize(self):
-        self.matrix = []
-        for i in range(3):
-            col = []
-            for j in range(3):
-                col.append(j)
-            self.matrix.append(col)
-        return self.matrix
-
-    def __str__(self):
-        return f'[({self.matrix[0][0]}, {self.matrix[0][1]}, {self.matrix[0][2]})\n ({self.matrix[1][0]}, {self.matrix[1][1]}, {self.matrix[1][2]})\n ({self.matrix[2][0]}, {self.matrix[2][1]}, {self.matrix[2][2]})]'
-
-    def __repr__(self):
-        return f'[({self.matrix[0][0]}, {self.matrix[0][1]}, {self.matrix[0][2]})\n ({self.matrix[1][0]}, {self.matrix[1][1]}, {self.matrix[1][2]})\n ({self.matrix[2][0]}, {self.matrix[2][1]}, {self.matrix[2][2]})]'
-matrix = matrix3d
-print(matrix)
