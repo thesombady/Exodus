@@ -1,5 +1,6 @@
 import tkinter as tk
 from PIL import Image, ImageTk
+import os
 
 class MainWindow(tk.Frame):
     TITLE = "Exodus Game Engine"
@@ -12,7 +13,7 @@ class MainWindow(tk.Frame):
         self.master.title(self.TITLE)
         Canvas = tk.Canvas(self.master, width = 841, height = 422, bg = 'blue')
         Canvas.pack()
-        img = ImageTk('Exodus.jpg')
+        img = ImageTk(Image.open('Exodus.jpg'))
         Canvas.create_image(self.master, width = 841, height = 422, image=img)
 
 #851 × 422
