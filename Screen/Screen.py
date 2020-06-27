@@ -13,9 +13,9 @@ class MainWindow(tk.Frame):
         self.master.title(self.TITLE)
         Canvas = tk.Canvas(self.master, width = 841, height = 422, bg = 'blue')
         Canvas.pack()
-        os.chdir('/Users/andreasevensen/Documents/GitHub/Exodus/Screen')
-        img = Image.open('Exodus.jpg')
-        Canvas.create_image(width = 841, height = 422, image=img)
+        #os.chdir('/Users/andreasevensen/Documents/GitHub/Exodus/Screen')
+        #img = Image.open('Exodus.jpg')
+        #Canvas.create_image(width = 841, height = 422, image=img)
 
 #851 × 422
 
